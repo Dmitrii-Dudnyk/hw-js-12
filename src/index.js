@@ -3,10 +3,8 @@ import debounce from "lodash.debounce";
 import countriesListTpl from "./templates/countries-list.hbs";
 import countryCardTpl from "./templates/country-card.hbs";
 import API from "./js/fetchCountries";
-import getRefs from "./js/get-refs";
+import refs from "./js/get-refs";
 import error from "./js/pnotify";
-
-const refs = getRefs();
 
 refs.searchCountry.addEventListener("input", debounce(inputChange, 500));
 
